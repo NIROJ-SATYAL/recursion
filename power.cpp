@@ -7,8 +7,11 @@ int power(int m,int n)
     {
         return 1;
     }
+    if(n%2==0){
+        return power(m*m,n/2); 
+    }
     else{
-        return power(m,n-1)*m;//recursion call at returning time 
+        return m*power(m*m,(n-1)/2);
     }
 }
 int main()
